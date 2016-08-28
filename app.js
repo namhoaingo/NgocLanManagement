@@ -3,8 +3,10 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
+console.log(__dirname);
+
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+   res.sendFile(path.join(__dirname+ '/client/main/index.html'));
 });
 
 app.listen(3000, function () {
